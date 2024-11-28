@@ -12,6 +12,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    manifest: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -28,8 +29,5 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/api/, '')
       }
     }
-  },
-  define: {
-    'process.env': process.env
   }
 });
